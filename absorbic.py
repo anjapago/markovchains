@@ -40,12 +40,12 @@ def test_absorbic(transitionmat):
 
 
 	print(" from simulation:")
-	print(" The final state absorbing probabilities starting from state 2 are, f21: " + str(simfprobs[0,0])+ " and f24: "+str(simfprobs[0,1]))
-	print(" The final state absorbing probabilities starting from state 3 are, f31: " + str(simfprobs[1,0])+ " and f34: "+str(simfprobs[1,1]))
+	print(" The final state absorbing probabilities starting from state 2 are, \n f21: " + str(simfprobs[0,0])+ " and f24: "+str(simfprobs[0,1]))
+	print(" The final state absorbing probabilities starting from state 3 are, \n f31: " + str(simfprobs[1,0])+ " and f34: "+str(simfprobs[1,1]))
 
 	print("\n from exact calculation:")
-	print(" The final state absorbing probabilities starting from state 2 are, f21: " + str(fprobs[0,0])+ " and f24: "+str(fprobs[0,1]))
-	print(" The final state absorbing probabilities starting from state 3 are, f31: " + str(fprobs[1,0])+ " and f34: "+str(fprobs[1,1]))
+	print(" The final state absorbing probabilities starting from state 2 are, \n f21: " + str(fprobs[0,0])+ " and f24: "+str(fprobs[0,1]))
+	print(" The final state absorbing probabilities starting from state 3 are, \n f31: " + str(fprobs[1,0])+ " and f34: "+str(fprobs[1,1]))
 
 	print("\n Difference between simulation and calculation:")
 	print(" f21: " + str(simfprobs[0,0]-fprobs[0,0]))
