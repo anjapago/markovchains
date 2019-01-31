@@ -27,7 +27,7 @@ def test_ergodic(transitionmat):
 	np.random.seed(100)
 
 	numexp = 100
-	numiter = 1000
+	numiter = 10000
 	# matrix to store the state at each iteration of the markov chain
 	statemat = np.zeros((numexp, numiter))
 	startstates = np.zeros(numexp)
@@ -44,8 +44,10 @@ def test_ergodic(transitionmat):
 			currstate = np.random.choice(a= list(range(numstates)), p=np.squeeze(np.asarray(statetransprobs)))+1
 			statemat[exp, niter]= currstate
 
-	unique, counts = np.unique(statemat, return_counts=True)
-	print("stationary state from simulatons: " + str(counts/np.product(statemat.shape)))
+	#unique, counts = np.unique(statemat, return_counts=True)
+	unique, counts = np.unique(statemat[:,9000:], return_counts=True)
+	sim_pi = counts/np.product(statemat[:,9000:].shape)
+	print("stationary state from simulatons: " + str(sim_pi))
 
 #testmat= np.matrix([[0.3, 0.3, 0.2, 0.2], [0.4, 0.3, 0.2, 0.1], [0.3, 0.1, 0.2, 0.4], [0.1, 0.1, 0.1, 0.7]])
 #test_ergodic(testmat)
